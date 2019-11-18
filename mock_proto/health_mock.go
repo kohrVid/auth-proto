@@ -35,22 +35,22 @@ func (m *MockHealthClient) EXPECT() *MockHealthClientMockRecorder {
 	return m.recorder
 }
 
-// Check mocks base method
-func (m *MockHealthClient) Check(arg0 context.Context, arg1 *proto.HealthCheckRequest, arg2 ...grpc.CallOption) (*proto.HealthCheckResponse, error) {
+// HealthCheck mocks base method
+func (m *MockHealthClient) HealthCheck(arg0 context.Context, arg1 *proto.HealthCheckRequest, arg2 ...grpc.CallOption) (*proto.HealthCheckResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
-	ret := m.ctrl.Call(m, "Check", varargs...)
+	ret := m.ctrl.Call(m, "HealthCheck", varargs...)
 	ret0, _ := ret[0].(*proto.HealthCheckResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
-// Check indicates an expected call of Check
-func (mr *MockHealthClientMockRecorder) Check(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+// HealthCheck indicates an expected call of HealthCheck
+func (mr *MockHealthClientMockRecorder) HealthCheck(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Check", reflect.TypeOf((*MockHealthClient)(nil).Check), varargs...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HealthCheck", reflect.TypeOf((*MockHealthClient)(nil).HealthCheck), varargs...)
 }
