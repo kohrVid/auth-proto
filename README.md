@@ -11,7 +11,7 @@ This is a repository for the protobuf files in the kohrVid auth project.
 
 ## Setup
 
-Protobuf files can be found in `./pb`. If changes are made to them, the `protoc`
+Protobuf files can be found in the root of this repository. If changes are made to them, the `protoc`
 command will need to be re-run.
 
 Firstly, ensure that you have protoc installed. The best way to install this on
@@ -36,4 +36,5 @@ this can be found in `./mock_proto`
 If any changes are made to protobuf, most probably this will also need to be
 regenerated. The command used to generate the existing code was as follows:
 
-    mockgen github.com/kohrVid/auth/proto AuthenticationServiceClient > mock_proto/protoMock.go
+    mockgen github.com/kohrVid/auth/proto AuthenticationServiceClient > mock_proto/auth_mock.go
+    mockgen github.com/kohrVid/auth/proto HealthClient > mock_proto/health_mock.go
