@@ -36,5 +36,5 @@ this can be found in `./mock_proto`
 If any changes are made to protobuf, most probably this will also need to be
 regenerated. The command used to generate the existing code was as follows:
 
-    mockgen github.com/kohrVid/auth/proto AuthenticationServiceClient > mock_proto/auth_mock.go
-    mockgen github.com/kohrVid/auth/proto HealthClient > mock_proto/health_mock.go
+    mockgen github.com/kohrVid/auth-proto AuthenticationServiceClient > mock_proto/auth_mock.go
+    mockgen github.com/kohrVid/auth-proto HealthClient > mock_proto/health_mock.go
